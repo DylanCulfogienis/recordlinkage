@@ -83,6 +83,9 @@ def is_label_dataframe(label, df):
 def get_length(x):
     """Return int or len(x)"""
 
+    if isinstance(x, pandas.DataFrame) or isinstance(x, numpy.ndarray):
+        # Must use x.shape with numpy arrays in order to prevent overflow
+        return x.shape[0]
     try:
         return int(x)
     except Exception:
