@@ -73,7 +73,7 @@ def max_pairs(shape):
         n = int(x * (x - 1) / 2)
 
     else:
-        n = numpy.prod([get_length(xi) for xi in shape], dtype=np.uint64)
+        n = numpy.prod([get_length(xi) for xi in shape], dtype=numpy.uint64)
 
     return n
 
@@ -117,7 +117,7 @@ def full_index_size(*args):
         n = get_length(args[0])
         size = int(n * (n - 1) / 2)
     else:
-        size = numpy.prod([get_length(arg) for arg in args], dtype=np.unit64)
+        size = numpy.prod([get_length(arg) for arg in args], dtype=numpy.unit64)
 
     return size
 
